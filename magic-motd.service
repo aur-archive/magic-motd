@@ -1,0 +1,10 @@
+[Unit]
+Description=Message of the day generator
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/magic-motd -w
+RemainAfterExit=no
+
+[Install]
+WantedBy=multi-user.target
